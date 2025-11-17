@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v={{ time }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Expense 💵</h1>
+        <form action="/add" method="POST">
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="number" name="amount" placeholder="Amount" required>
+
+            <!-- Predefined category dropdown -->
+            <select name="category">
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Bills">Bills</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <!-- Hidden date field auto-filled -->
+            <input type="hidden" name="date" value="{{ today }}">
+
+            <button type="submit" class="btn">Add Expense</button>
+        </form>
+        <a href="/" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>

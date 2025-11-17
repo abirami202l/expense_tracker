@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v={{ time }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Expense Tracker 💰</h1>
+        <div class="btn-container">
+            <a href="/add" class="btn">+ Add Expense</a>
+            <a href="/report" class="btn">View Report</a>
+        </div>
+        <h2>Total Spent: ₹{{ total }}</h2>
+
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+            {% for exp in expenses %}
+            <tr>
+                <td>{{ exp[1] }}</td>
+                <td>₹{{ exp[2] }}</td>
+                <td>{{ exp[3] }}</td>
+                <td>{{ exp[4] }}</td>
+                <td><a href="/delete/{{ exp[0] }}">🗑️</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

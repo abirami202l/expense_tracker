@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v={{ time }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Report 📊</h1>
+
+        <!-- Neon pie chart -->
+        <canvas id="expenseChart" width="50" height="50"></canvas>
+
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+            </tr>
+            {% for exp in expenses %}
+            <tr>
+                <td>{{ exp[1] }}</td>
+                <td>₹{{ exp[2] }}</td>
+                <td>{{ exp[3] }}</td>
+                <td>{{ exp[4] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Total Spent: ₹{{ total }}</h2>
+        <a href="/" class="btn">Back to Home</a>
+    </div>
+
+    <script>
+        const data = {
+            labels: {{ categories | safe }},
+            datasets: [{
+                label: 'Expenses',
+                data: {{ amounts | safe }},
+                backgroundColor: [
+                    '#ff1e56',
+                    '#ff9f1c',
+                    '#2ec4b6',
+                    '#8d99ae',
+                    '#8338ec'
+                ],
+                hoverOffset: 10
+            }]
+        };
+
+        const config = {
+            type: 'pie',
+            data: data,
+            options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#00f6ff',
+                            font: { size: 14 }
+                        }
+                    }
+                }
+            }
+        };
+
+        new Chart(
+            document.getElementById('expenseChart'),
+            config
+        );
+    </script>
+</body>
+</html>

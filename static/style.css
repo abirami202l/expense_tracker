@@ -1,0 +1,145 @@
+/* General body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0100b2;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 20px;
+    box-shadow: 0 0 40px #00f6ff, 0 0 80px #ff00ff;
+}
+
+/* Headings */
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #00f6ff;
+    text-shadow: 0 0 10px #00f6ff, 0 0 20px #ff00ff, 0 0 30px #00f6ff;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00f6ff;
+}
+
+/* Buttons */
+.btn {
+    background: transparent;
+    color: #00f6ff;
+    padding: 12px 30px;
+    margin: 10px 5px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid #00f6ff;
+    box-shadow: 0 0 10px #00f6ff, 0 0 20px #ff00ff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #00f6ff;
+    color: #0f0f1a;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00f6ff, 0 0 40px #ff00ff;
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    padding: 10px;
+    margin: 10px 5px;
+    border-radius: 12px;
+    border: 2px solid #00f6ff;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 0 10px #00f6ff, 0 0 20px #ff00ff;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+/* Submit button */
+button.btn {
+    width: 220px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: rgba(0,0,0,0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #00f6ff, 0 0 40px #ff00ff;
+}
+
+/* Table header */
+th, td {
+    padding: 12px 20px;
+    text-align: center;
+    border-bottom: 1px solid #00f6ff;
+}
+
+th {
+    background: rgba(0,0,0,0.5);
+    color: #00f6ff;
+    font-size: 1.1em;
+    text-shadow: 0 0 5px #00f6ff;
+}
+
+/* Alternating neon row colors */
+tr:nth-child(odd) {
+    background: rgba(0,255,255,0.1);
+    box-shadow: inset 0 0 5px #00f6ff;
+}
+
+tr:nth-child(even) {
+    background: rgba(255,0,255,0.1);
+    box-shadow: inset 0 0 5px #ff00ff;
+}
+
+tr:hover {
+    background: rgba(0,255,255,0.3);
+    transform: scale(1.02);
+    transition: 0.2s;
+    box-shadow: 0 0 15px #00f6ff, 0 0 30px #ff00ff;
+}
+
+/* Delete icon */
+a[href^="/delete"] {
+    color: #ff00ff;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+a[href^="/delete"]:hover {
+    color: #00f6ff;
+    text-shadow: 0 0 5px #00f6ff, 0 0 10px #ff00ff;
+}
+
+/* Button container spacing */
+.btn-container {
+    margin-bottom: 20px;
+}
