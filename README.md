@@ -1,2 +1,51 @@
-# expense_tracker
-daily expense tracker with cyberpunk glowing neon ui
+# Smart Expense Tracker
+
+This is my first small website project hosted on GitHub Pages.
+I’m still learning GitHub and web hosting, so this project is mainly for practice.
+
+# What this does
+
+Add expenses
+
+View total spending
+
+See a simple report
+
+## Tech Used
+
+HTML
+
+CSS
+
+(Flask may be added later)
+
+## Why I made this
+
+### I wanted to learn the basics of:
+
+Creating a GitHub repository
+
+Uploading project files
+
+Hosting a website
+
+Understanding how deployment works
+# Note
+
+This project is still in progress and may have simple bugs or missing features.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
