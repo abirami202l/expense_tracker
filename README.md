@@ -17,7 +17,7 @@ HTML
 
 CSS
 
-(Flask may be added later)
+Flask for backend
 
 ## Why I made this
 
@@ -33,7 +33,7 @@ Understanding how deployment works
 # Note
 
 This project is still in progress and may have simple bugs or missing features.
-
+this project is made in flask using python so flask needed for running.
 
 
 
