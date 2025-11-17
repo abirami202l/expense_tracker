@@ -1,6 +1,6 @@
 # Smart Expense Tracker
 
-This is my first small website project hosted on GitHub Pages.
+This is my first small website project.
 I’m still learning GitHub and web hosting, so this project is mainly for practice.
 
 # What this does
@@ -34,6 +34,10 @@ Understanding how deployment works
 
 This project is still in progress and may have simple bugs or missing features.
 this project is made in flask using python so flask needed for running.
+
+follow file structure exactly as given and run the app.py file to see website 
+
+will share deployed website link below if you arent running website locally
 
 
 
